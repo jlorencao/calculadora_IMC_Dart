@@ -38,6 +38,8 @@ void main(List<String> arguments) {
   //mostrar o resultado
 
   var imc = (pessoa1.calculaImc()).toStringAsFixed(2); 
-  
+  var classificaImc = (pessoa1.classificacaoImc()).toString();
+
   print("O IMC de $nome é: $imc");
+  print(" Com este IMC $nome é classificado como $classificaImc");
 }
