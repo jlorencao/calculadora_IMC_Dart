@@ -32,11 +32,14 @@ class Pessoa {
   double calculaImc() {
     
     _imc = _peso / (pow(_altura, 2));
+  
     return _imc;
   }
 
   String classificacaoImc() {
     
+     var imc = calculaImc();
+
     if (_imc < 16) {
       return "Magreza grave";
 
@@ -46,7 +49,7 @@ class Pessoa {
     } else if (_imc >= 17 && _imc < 18.5) {
       return "Magreza leve";
 
-    } else if (_imc >= 18.5 && _imc < 25) {
+    } else if (imc >= 18.5 && imc < 25) {
       return "Saudavel";
 
     } else if (_imc >= 25 && _imc < 30) {
